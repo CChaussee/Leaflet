@@ -1,4 +1,9 @@
-const queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+const myMap = L.map("map", {
+  center: [38.89511, -77.03637],
+  zoom: 7 
+})
+
+const queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson";
 
 d3.json(queryUrl).then(data => {
     console.log(data);
