@@ -20,9 +20,7 @@ function createFeatures(earthquakeData) {
   }
 
 
-  const earthquakes = L.geoJSON(earthquakeData, {
-    onEachFeature: onEachFeature,
-  });
+ 
 //Defining Magnitude
   const mags = L.geoJSON(earthquakeData, {
     onEachFeature: onEachFeature,
@@ -56,7 +54,7 @@ function getColor(magnitude) {
     }
   }
 
-  createMap(earthquakes, mags);
+  createMap(mags);
 }
 //Creating legend for map
 // const legend = L.control({position: 'bottomright'});
@@ -65,7 +63,7 @@ function getColor(magnitude) {
 //   div.innerHTML='Eathquake<br>Magnitude<br><hr>'
 // legend.addTo(myMap)
 
-function createMap(earthquakes, mags) {
+function createMap(mags) {
 
 //Defining layers
   const streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -91,7 +89,6 @@ function createMap(earthquakes, mags) {
   };
 //Overlay maps
   const overlayMaps = {
-    Earthquakes: earthquakes,
     Magnitudes: mags
   };
 
@@ -100,7 +97,7 @@ function createMap(earthquakes, mags) {
       37.09, -95.71
     ],
     zoom: 5,
-    layers: [streetmap, earthquakes]
+    layers: [streetmap, mags]
   });
 
 
