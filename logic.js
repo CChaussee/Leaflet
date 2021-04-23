@@ -102,7 +102,7 @@ function createMap(mags) {
 
 
   L.control.layers(baseMaps, overlayMaps, {
-    collapsed: false
+    collapsed: true
   }).addTo(myMap);
 }
 
