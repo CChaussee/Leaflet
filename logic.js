@@ -102,9 +102,9 @@ function createMap(mags) {
 }
 
 //Creating legend for map
-const legend = L.control({position: 'bottomright'});
-legend.onAdd = function (map) {
-  const div = L.DomUtil.create('div', 'info legend');
-  div.innerHTML='Eathquake<br>Magnitude<br><hr>'
-}
-legend.addTo(myMap)
+// const legend = L.control({position: 'bottomright'});
+// legend.onAdd = function (map) {
+//   const div = L.DomUtil.create('div', 'info legend');
+//   div.innerHTML='Eathquake<br>Magnitude<br><hr>'
+// }
+// legend.addTo(myMap)
