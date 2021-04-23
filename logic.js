@@ -56,12 +56,7 @@ function getColor(magnitude) {
 
   createMap(mags);
 }
-//Creating legend for map
-// const legend = L.control({position: 'bottomright'});
-// legend.onAdd = function (map) {
-//   const div = L.DomUtil.create('div', 'info legend'),
-//   div.innerHTML='Eathquake<br>Magnitude<br><hr>'
-// legend.addTo(myMap)
+
 
 function createMap(mags) {
 
@@ -106,3 +101,10 @@ function createMap(mags) {
   }).addTo(myMap);
 }
 
+//Creating legend for map
+const legend = L.control({position: 'bottomright'});
+legend.onAdd = function (map) {
+  const div = L.DomUtil.create('div', 'info legend');
+  div.innerHTML='Eathquake<br>Magnitude<br><hr>'
+}
+legend.addTo(myMap)
