@@ -36,21 +36,21 @@ function createFeatures(earthquakeData) {
 function getColor(magnitude) {
     switch (true) {
     case magnitude > 7:
-      return "#B22222"
+      return "#ff0000"
     case magnitude > 6:
-      return "#8B0000"
+      return "#ff6600"
     case magnitude > 5:
-      return "#ea2c2c";
+      return "#ff8c1a";
     case magnitude > 4:
-      return "#ea822c";
+      return "#ffc34d";
     case magnitude > 3:
-      return "#ee9c00";
+      return "#ffff66";
     case magnitude > 2:
-      return "#48D1CC";
+      return "#99ffff";
     case magnitude > 1:
-      return "#90EE90";
+      return "#b3ffd9";
     default:
-      return "#FFEFD5";
+      return "#ffffff";
     }
   }
 
